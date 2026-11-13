@@ -2065,3 +2065,138 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
+
+/*-----------------------------------*\
+  #CV CONTENT (experience details, tags, featured work)
+\*-----------------------------------*/
+
+.about-text strong { color: var(--orange-yellow-crayola); font-weight: var(--fw-500); }
+
+.timeline-text { margin-top: 6px; }
+
+.timeline-item-title { text-transform: none; }
+
+.timeline-project {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+.timeline-bullets {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.timeline-bullets li:not(:last-child) { margin-bottom: 6px; }
+
+.timeline-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vegas-gold);
+}
+
+.timeline-bullets strong { color: var(--white-2); font-weight: var(--fw-500); }
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tech-tags li {
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+  border-radius: 6px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  line-height: 1.4;
+  padding: 3px 8px;
+}
+
+.skill-groups {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.skill-group dt {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+.featured { margin-bottom: 35px; }
+
+.featured-title { margin-bottom: 20px; }
+
+.featured-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.featured-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.featured-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.featured-meta {
+  color: var(--vegas-gold);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.featured-item-title { margin-bottom: 8px; text-transform: none; }
+
+.featured-text {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .featured-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .skill-group {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: start;
+    gap: 12px;
+  }
+  .skill-group .tech-tags { margin-top: 0; }
+}
